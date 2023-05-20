@@ -1,0 +1,27 @@
+#queryIndex	queryItem	stringId	identity	bitscore	preferredName	annotation
+1	MHP7448_RS00135	295358.mhp028	100.0	314.3	mhp028	Conserved hypothetical protein; Belongs to the peptidase S26 family
+2	MHP7448_RS00160	295358.mhp032	97.5	326.2	lspA	Lipoprotein signal peptidase (prolipoprotein signal peptidase) (signal peptidase ii) (spase ii); Belongs to the peptidase A8 family
+3	MHP7448_RS00735	295358.mhp252	99.4	695.3	celM	annotation not available
+4	MHP7448_RS00780	295358.mhp244	99.3	1907.9	mhp244	annotation not available
+5	MHP7448_RS00895	295358.mhp222	97.5	1214.5	ABC	annotation not available
+6	MHP7448_RS00965	295358.mhp209	99.2	503.8	map	Methionine amino peptidase; Removes the N-terminal methionine from nascent proteins. The N-terminal methionine is often cleaved when the second residue in the primary sequence is small and uncharged (Met-Ala-, Cys, Gly, Pro, Ser, Thr, or Val). Requires deformylation of the N(alpha)-formylated initiator methionine before it can be hydrolyzed
+7	MHP7448_RS01125	295358.mhp175	99.9	1358.6	ftsH	Cell division protease ftsh; Acts as a processive, ATP-dependent zinc metallopeptidase for both cytoplasmic and membrane proteins. Plays a role in the quality control of integral membrane proteins
+8	MHP7448_RS01645	295358.mhp312	97.2	455.3	mhp312	annotation not available
+9	MHP7448_RS01695	295358.mhp321	98.5	3602.8	mhp321	annotation not available
+10	MHP7448_RS01760	295358.mhp335	98.3	228.0	mhp335	annotation not available
+11	MHP7448_RS01830	295358.mhp292	94.8	1334.3	aprE	annotation not available
+12	MHP7448_RS01965	295358.mhp366	97.1	956.4	mhp366	annotation not available
+13	MHP7448_RS02430	295358.mhp445	96.2	1164.1	mhp445	annotation not available
+14	MHP7448_RS02535	295358.mhp462	98.7	884.0	pepA	Leucyl aminopeptidase; Belongs to the peptidase M17 family
+15	MHP7448_RS02710	295358.mhp496	96.3	1053.9	mhp496	annotation not available
+16	MHP7448_RS02825	295358.mhp520	98.7	1182.2	pepF	annotation not available
+17	MHP7448_RS02840	295358.mhp541	99.9	1635.9	lon	ATP-dependent serine protease that mediates the selective degradation of mutant and abnormal proteins as well as certain short- lived regulatory proteins. Required for cellular homeostasis and for survival from DNA damage and developmental changes induced by stress. Degrades polypeptides processively to yield small peptide fragments that are 5 to 10 amino acids long. Binds to DNA in a double-stranded, site-specific manner
+18	MHP7448_RS02910	295358.mhp554	98.9	337.8	mhp554	annotation not available
+19	MHP7448_RS03080	295358.mhp586	100.0	424.5	mhp586	annotation not available
+20	MHP7448_RS03310	295358.mhp630	97.2	1483.0	mhp630	annotation not available
+21	MHP7448_RS03360	295358.mhp640	99.0	1558.5	mhp640	annotation not available
+22	MHP7448_RS03395	295358.mhp650	94.7	1070.8	mhp650	annotation not available
+23	MHP7448_RS03465	295358.mhp662	100.0	447.6	mhp662	annotation not available
+24	MHP7448_RS03555	295358.mhp680	98.6	676.4	pepP	annotation not available
+26	MHP7448_RS03870	295358.mhp337	44.6	66.6	mhp337	annotation not available
+27	MHP7448_RS04050	295358.mhp560	96.5	164.1	mhp560	annotation not available
