@@ -60,36 +60,27 @@ names(network_igraph_walktrap.bind) [names(network_igraph_walktrap.bind) == "net
 
 # Importando dados de centraliade obtidos no Cytoscape
 
-network_01 <- as.data.frame(node_centrality$name)
-network_02 <- as.data.frame(node_centrality$Betweenness.unDir)
-network_03 <- as.data.frame(node_centrality$Degree.unDir)
-network_04 <- as.data.frame(node_centrality$Centrality)
+network_centrality_01 <- as.data.frame(node_centrality$name)
+network_centrality_02 <- as.data.frame(node_centrality$Betweenness.unDir)
+network_centrality_03 <- as.data.frame(node_centrality$Degree.unDir)
+network_centrality_04 <- as.data.frame(node_centrality$Centrality)
 
-network_combined <- cbind(network_01, network_02, network_03, network_04)
+network_centrality <- cbind(network_centrality_01, network_centrality_02, network_centrality_03, network_centrality_04)
 
 # Arrumando nomes das colunas do dataframe
-names(network_combined) [names(network_combined) == "node_centrality$name"] <- "Nodes"
-names(network_combined) [names(network_combined) == "node_centrality$Betweenness.unDir"] <- "Betweennes"
-names(network_combined) [names(network_combined) == "node_centrality$Degree.unDir"] <- "Degree"
-names(network_combined) [names(network_combined) == "node_centrality$Centrality"] <- "Centrality"
+names(network_centrality) [names(network_centrality) == "node_centrality$name"] <- "Nodes"
+names(network_centrality) [names(network_centrality) == "node_centrality$Betweenness.unDir"] <- "Betweennes"
+names(network_centrality) [names(network_centrality) == "node_centrality$Degree.unDir"] <- "Degree"
+names(network_centrality) [names(network_centrality) == "node_centrality$Centrality"] <- "Centrality"
 
 # Combinando a análises de comunidade e centralidades gerando um dataframe concatenado
-combined.df <- merge(rede_igraph_walktrap.mdf, rede_completa_nova, by="Nodes")
-write.table(cbind(rownames(combined.df), combined.df), file = 'Combinadas.txt', sep ='\t',row.names = F, quote = F)
+network_combined.df <- merge(network_igraph_walktrap.bind, network_centrality, by = "Nodes")
+write.table(cbind(rownames(network_combined.df), network_combined.df), file = '05_Network_centrality_modularity.txt', sep ='\t',row.names = F, quote = F)
 
+# Comando para selecionar uma comunidade de nós de interesse
 
-
-###
-
-
-# Importando dados de centralidade obtido no Cytoscape e produzidos no Code_step_01.R
-final_network_topology <- merge(network_igraph_walktrap.bind, node_centrality)
-write.table(cbind(rownames(topologies), topologies), file = 'Final network topology.txt', sep = '\t', row.names = F, quote = F)
-
-final_network_topology %>% group_by('WT_Cluster') %>% count('Centrality')
-
-#Comando para selecionar uma comunidade de nós de interesse
-Cluster_8_wtc <- subset(network_igraph_walktrap.bind, WT_Cluster == "8" )
-Cluster_4_wtc <- subset(network_igraph_walktrap.bind, WT_Cluster == "4" )
+network_combined.df %>% group_by('Module') %>% count('Centrality')
+Cluster_8_wtc <- subset(network_igraph_walktrap.bind, Module == "8" )
+Cluster_4_wtc <- subset(network_igraph_walktrap.bind, Module == "4" )
 
 ##### FIM ##### B. A. R. T.
