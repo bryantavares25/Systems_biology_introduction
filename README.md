@@ -23,3 +23,7 @@ Abri o arquivo 'string_interactions_short.tsv'
 Selecionei para análise apenas as proteínas conectadas entre si numa grande rede. Proteínas isoladas foram descartadas: mhp335, mhp334, mhp332; mhp311, mhp312, mhp310; mhp444, mhp445; mhp336, mhp337. 426 Nodes -> 416 Nodes
 Citiscape 2.2 -> Análise de Degree and Betweenes
 
+**Rscript**
+Etapa 1 > 
+Etapa 2 >
+Etapa 3 >
