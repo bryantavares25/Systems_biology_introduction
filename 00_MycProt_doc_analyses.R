@@ -84,3 +84,10 @@ Cluster_8_wtc <- subset(network_igraph_walktrap.bind, Module == "8" )
 Cluster_4_wtc <- subset(network_igraph_walktrap.bind, Module == "4" )
 
 ##### FIM ##### B. A. R. T.
+
+#Bioconductor
+#cluster profile
+#redução de similararidade semâtica
+
+
+#Rrvigo
