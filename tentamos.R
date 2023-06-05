@@ -31,4 +31,8 @@ library(AnnotationHub)
 #install.packages("BiocManager")
 #BiocManager::install("clusterProfiler")
 
+if (!require("BiocManager", quietly = TRUE))
+  install.packages("BiocManager")
+BiocManager::install("clusterProfiler")
 
+BiocManager::install(c("GenomicFeatures", "AnnotationDbi"))
