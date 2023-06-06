@@ -71,7 +71,8 @@ network_centrality <- cbind(network_centrality_01, network_centrality_02, networ
 names(network_centrality) [names(network_centrality) == "node_centrality$name"] <- "Nodes"
 names(network_centrality) [names(network_centrality) == "node_centrality$Betweenness.unDir"] <- "Betweennes"
 names(network_centrality) [names(network_centrality) == "node_centrality$Degree.unDir"] <- "Degree"
-names(network_centrality) [names(network_centrality) == "node_centrality$Centrality"] <- "Centrality"
+names(network
+      _centrality) [names(network_centrality) == "node_centrality$Centrality"] <- "Centrality"
 
 # Combinando a análises de comunidade e centralidades gerando um dataframe concatenado
 network_combined.df <- merge(network_igraph_walktrap.bind, network_centrality, by = "Nodes")
@@ -86,8 +87,7 @@ Cluster_4_wtc <- subset(network_igraph_walktrap.bind, Module == "4" )
 ##### FIM ##### B. A. R. T.
 
 #Bioconductor
-#cluster profile
+#cluster profiler
 #redução de similararidade semâtica
 
-
-#Rrvigo
+#rrvigo
