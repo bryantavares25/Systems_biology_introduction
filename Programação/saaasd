@@ -1,0 +1,55 @@
+#Comandos e bibliotecas para a análise de comunidades
+HSP47_completa <- read.delim("/cloud/project/HSP47_completa.tsv") #Comando para converter o arquivo *.tsv do String em um dataframe
+
+#Conjuntos de comandos e bibliotecas para converter um dataframe em grafo
+library(igraph)
+
+rede<-HSP47_completa[,c(1,2,13)]#Comando para selecionar as colunas de nós e escore combinado
+rede_igraph<-graph_from_data_frame(rede, directed = FALSE, vertices = NULL)#Comando para converter um dataframe para um objeto igraph
+plot(rede_igraph)#Comando para a representação gráfica da rede
+
+library(data.table)
+
+degree_cent_rede_igraph<-as.data.frame(degree(rede_igraph))
+bet_cent_rede_igraph<-as.data.frame(betweenness(rede_igraph))
+setDT(degree_cent_rede_igraph, keep.rownames = "Nodes")
+names(degree_cent_rede_igraph)[names(degree_cent_rede_igraph)=="degree(rede_igraph)"] <- "Degree_value"
+setDT(bet_cent_rede_igraph, keep.rownames = "Nodes")
+names(bet_cent_rede_igraph)[names(bet_cent_rede_igraph)=="betweenness(rede_igraph)"] <- "Betweenness_value"
+bet_degree_cent_rede_igraph<-merge(bet_cent_rede_igraph,degree_cent_rede_igraph,by="Nodes")
+mean(bet_degree_cent_rede_igraph$Betweenness_value)
+mean(bet_degree_cent_rede_igraph$Degree_value)
+bet_degree_cent_rede_igraph_hb<-bet_degree_cent_rede_igraph[(bet_degree_cent_rede_igraph$Degree_value>17.42574 & bet_degree_cent_rede_igraph$Betweenness_value>66.92079),]
+bet_degree_cent_rede_igraph_nhb<-bet_degree_cent_rede_igraph[(bet_degree_cent_rede_igraph$Degree_value<17.42574 & bet_degree_cent_rede_igraph$Betweenness_value>66.92079),]
+bet_degree_cent_rede_igraph_hnb<-bet_degree_cent_rede_igraph[(bet_degree_cent_rede_igraph$Degree_value>17.42574 & bet_degree_cent_rede_igraph$Betweenness_value<66.92079),]
+bet_degree_cent_rede_igraph_nhnb<-bet_degree_cent_rede_igraph[(bet_degree_cent_rede_igraph$Degree_value<17.42574 & bet_degree_cent_rede_igraph$Betweenness_value<66.92079),]
+bet_degree_cent_rede_igraph_hb$node_type<-"Hub-Bottleneck"
+bet_degree_cent_rede_igraph_nhb$node_type<-"Non-Hub-Bottleneck"
+bet_degree_cent_rede_igraph_hnb$node_type<-"Hub-Non-Bottleneck"
+bet_degree_cent_rede_igraph_nhnb$node_type<-"Non-Hub-Non-Bottleneck"
+bet_degree_cent_rede_igraph_hb$node_type_abbrev<-"HB"
+bet_degree_cent_rede_igraph_nhb$node_type_abbrev<-"NHB"
+bet_degree_cent_rede_igraph_hnb$node_type_abbrev<-"HNB"
+bet_degree_cent_rede_igraph_nhnb$node_type_abbrev<-"NHNB"
+bet_degree_cent_rede_igraph<-rbind(bet_degree_cent_rede_igraph_hb,bet_degree_cent_rede_igraph_hnb,bet_degree_cent_rede_igraph_nhb,bet_degree_cent_rede_igraph_nhnb)
+plot(bet_degree_cent_rede_igraph$Degree_value,bet_degree_cent_rede_igraph$Betweenness_value)
+
+#Análise de comunidades na rede rede_igraph usando o algoritmo walktrap communities implementado no igraph
+rede_igraph_walktrap<-walktrap.community(rede_igraph, weights = E(rede_igraph)$weight, steps = 4, merges =TRUE, modularity = FALSE)
+rede_igraph_walktrap.df<- as.data.frame(rede_igraph_walktrap$names)
+rede_igraph_walktrap.df2<- as.data.frame(rede_igraph_walktrap$membership)
+rede_igraph_walktrap.df3<-cbind(rede_igraph_walktrap.df,rede_igraph_walktrap.df2)
+names(rede_igraph_walktrap.df3)[names(rede_igraph_walktrap.df3)=="rede_igraph_walktrap$names"] <- "Nodes"
+names(rede_igraph_walktrap.df3)[names(rede_igraph_walktrap.df3)=="rede_igraph_walktrap$membership"] <- "WTC_membership"
+
+#Combinando dados de topologias locais e globais
+topologias<-merge(rede_igraph_walktrap.df3,bet_degree_cent_rede_igraph)
+write.table(cbind(rownames(topologias),topologias), file = 'topologias.txt', sep='\t', row.names=F, quote=F)
+
+#comando para analisar o número de nós centrais em uma comunidade
+library(dplyr)
+topologias %>% group_by(WTC_membership) %>% count(node_type_abbrev)
+
+#Comando para selecionar uma comunidade de nós de interesse
+Cluster_8_wtc<-subset(rede_igraph_walktrap.df3, WTC_membership =="8"))
+Cluster_4_wtc<-subset(rede_igraph_walktrap.df3, WTC_membership =="4")

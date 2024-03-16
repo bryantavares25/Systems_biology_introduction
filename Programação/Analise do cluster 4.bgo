@@ -1,0 +1,74 @@
+File created with BiNGO v3.0.5  (c) on 10 de mai de 2023 at 14:29:56
+
+ontology: namespace
+curator:  bingo
+
+Selected ontology file : bundle://122.0:1/data/GO_Biological_Process
+Selected annotation file : bundle://122.0:1/data/M_capsulatus_Bath_default
+Discarded evidence codes : 
+Overrepresentation
+Selected statistical test : Hypergeometric test
+Selected correction : Benjamini & Hochberg False Discovery Rate (FDR) correction
+Selected significance level : 0.05
+Testing option : Use whole annotation as reference set
+The selected cluster :
+RPL4	RPL5	RPL2	RPL3	RNC	RPL6	RPS15	RPS14	RPS17	RPS19	RPLA	RPS18	RPLL	RPL35	RPLK	RPS11	RPS10	RPS13	RPL21	RPL20	RPS8	RPL23	RPL22	RPSB	RPSL	RPSI	RPSG	RPSF	RPST	RPL24	RPL27	RPL29	RPL28	RPSP	RPL14	RPS3	RPL16	RPL15	RPL18	RPL17	MHP434	RPLS	SECY	RPME	ATPG	ATPH	ATPE	ATPF	ATPD	ATPB	
+
+No annotations were retrieved for the following entities:
+RPL4	RPL5	RPL2	RPL3	RPL6	RPS15	RPS14	RPS17	RPS19	RPS18	RPL14	RPS3	RPL35	RPL16	RPL15	RPS11	RPL18	RPS10	RPL17	RPS13	MHP434	RPL21	RPL20	RPS8	RPL23	RPL22	ATPG	ATPE	RPL24	RPL27	ATPB	RPL29	RPL28	
+
+GO-ID	p-value	corr p-value	x	n	X	N	Description	Genes in test set
+6412	3.7892E-15	2.9177E-13	12	95	17	2919	translation	RPME|RPSL|RPSI|RPLS|RPSG|RPLA|RPSF|RPLL|RPST|RPLK|RPSB|RPSP
+10467	1.0192E-13	3.9240E-12	13	169	17	2919	gene expression	RPLS|RNC|RPSB|RPME|RPSL|RPSI|RPSG|RPLA|RPSF|RPLL|RPST|RPLK|RPSP
+44267	2.2220E-12	5.7032E-11	12	159	17	2919	cellular protein metabolic process	RPME|RPSL|RPSI|RPLS|RPSG|RPLA|RPSF|RPLL|RPST|RPLK|RPSB|RPSP
+19538	5.3744E-11	1.0346E-9	12	207	17	2919	protein metabolic process	RPME|RPSL|RPSI|RPLS|RPSG|RPLA|RPSF|RPLL|RPST|RPLK|RPSB|RPSP
+34645	8.9434E-11	1.3773E-9	12	216	17	2919	cellular macromolecule biosynthetic process	RPME|RPSL|RPSI|RPLS|RPSG|RPLA|RPSF|RPLL|RPST|RPLK|RPSB|RPSP
+44249	2.3095E-10	2.9638E-9	15	496	17	2919	cellular biosynthetic process	RPLS|RPSB|RPME|RPSL|RPSI|RPSG|RPLA|ATPH|RPSF|ATPF|RPLL|RPST|ATPD|RPLK|RPSP
+9059	6.1437E-10	6.7581E-9	12	254	17	2919	macromolecule biosynthetic process	RPME|RPSL|RPSI|RPLS|RPSG|RPLA|RPSF|RPLL|RPST|RPLK|RPSB|RPSP
+9058	7.4876E-10	7.2069E-9	15	537	17	2919	biosynthetic process	RPLS|RPSB|RPME|RPSL|RPSI|RPSG|RPLA|ATPH|RPSF|ATPF|RPLL|RPST|ATPD|RPLK|RPSP
+9987	1.1269E-8	9.6416E-8	17	1000	17	2919	cellular process	RPLS|RNC|RPSB|SECY|RPME|RPSL|RPSI|RPSG|RPLA|ATPH|RPSF|ATPF|RPLL|RPST|ATPD|RPLK|RPSP
+44238	1.3470E-8	1.0372E-7	16	808	17	2919	primary metabolic process	RPLS|RNC|RPSB|RPME|RPSL|RPSI|RPSG|RPLA|ATPH|RPSF|ATPF|RPLL|RPST|ATPD|RPLK|RPSP
+44260	2.0439E-8	1.4307E-7	13	435	17	2919	cellular macromolecule metabolic process	RPLS|RNC|RPSB|RPME|RPSL|RPSI|RPSG|RPLA|RPSF|RPLL|RPST|RPLK|RPSP
+44237	6.0750E-8	3.8982E-7	16	889	17	2919	cellular metabolic process	RPLS|RNC|RPSB|RPME|RPSL|RPSI|RPSG|RPLA|ATPH|RPSF|ATPF|RPLL|RPST|ATPD|RPLK|RPSP
+43170	2.9390E-7	1.7408E-6	13	539	17	2919	macromolecule metabolic process	RPLS|RNC|RPSB|RPME|RPSL|RPSI|RPSG|RPLA|RPSF|RPLL|RPST|RPLK|RPSP
+8152	1.8218E-5	1.0020E-4	16	1282	17	2919	metabolic process	RPLS|RNC|RPSB|RPME|RPSL|RPSI|RPSG|RPLA|ATPH|RPSF|ATPF|RPLL|RPST|ATPD|RPLK|RPSP
+34220	1.0616E-4	3.0276E-4	3	17	17	2919	ion transmembrane transport	ATPH|ATPF|ATPD
+9141	1.0616E-4	3.0276E-4	3	17	17	2919	nucleoside triphosphate metabolic process	ATPH|ATPF|ATPD
+9142	1.0616E-4	3.0276E-4	3	17	17	2919	nucleoside triphosphate biosynthetic process	ATPH|ATPF|ATPD
+9144	1.0616E-4	3.0276E-4	3	17	17	2919	purine nucleoside triphosphate metabolic process	ATPH|ATPF|ATPD
+9145	1.0616E-4	3.0276E-4	3	17	17	2919	purine nucleoside triphosphate biosynthetic process	ATPH|ATPF|ATPD
+46034	1.0616E-4	3.0276E-4	3	17	17	2919	ATP metabolic process	ATPH|ATPF|ATPD
+6754	1.0616E-4	3.0276E-4	3	17	17	2919	ATP biosynthetic process	ATPH|ATPF|ATPD
+9199	1.0616E-4	3.0276E-4	3	17	17	2919	ribonucleoside triphosphate metabolic process	ATPH|ATPF|ATPD
+15985	1.0616E-4	3.0276E-4	3	17	17	2919	energy coupled proton transport, down electrochemical gradient	ATPH|ATPF|ATPD
+9201	1.0616E-4	3.0276E-4	3	17	17	2919	ribonucleoside triphosphate biosynthetic process	ATPH|ATPF|ATPD
+15986	1.0616E-4	3.0276E-4	3	17	17	2919	ATP synthesis coupled proton transport	ATPH|ATPF|ATPD
+9205	1.0616E-4	3.0276E-4	3	17	17	2919	purine ribonucleoside triphosphate metabolic process	ATPH|ATPF|ATPD
+9206	1.0616E-4	3.0276E-4	3	17	17	2919	purine ribonucleoside triphosphate biosynthetic process	ATPH|ATPF|ATPD
+55085	1.2694E-4	3.4908E-4	3	18	17	2919	transmembrane transport	ATPH|ATPF|ATPD
+15992	2.0467E-4	5.4343E-4	3	21	17	2919	proton transport	ATPH|ATPF|ATPD
+6818	2.7057E-4	6.9446E-4	3	23	17	2919	hydrogen transport	ATPH|ATPF|ATPD
+16310	6.0480E-4	1.4270E-3	3	30	17	2919	phosphorylation	ATPH|ATPF|ATPD
+6119	6.0480E-4	1.4270E-3	3	30	17	2919	oxidative phosphorylation	ATPH|ATPF|ATPD
+6163	6.6719E-4	1.4270E-3	3	31	17	2919	purine nucleotide metabolic process	ATPH|ATPF|ATPD
+6164	6.6719E-4	1.4270E-3	3	31	17	2919	purine nucleotide biosynthetic process	ATPH|ATPF|ATPD
+9150	6.6719E-4	1.4270E-3	3	31	17	2919	purine ribonucleotide metabolic process	ATPH|ATPF|ATPD
+9152	6.6719E-4	1.4270E-3	3	31	17	2919	purine ribonucleotide biosynthetic process	ATPH|ATPF|ATPD
+6796	8.0401E-4	1.6732E-3	3	33	17	2919	phosphate metabolic process	ATPH|ATPF|ATPD
+15672	9.5754E-4	1.9403E-3	3	35	17	2919	monovalent inorganic cation transport	ATPH|ATPF|ATPD
+6793	1.2209E-3	2.4105E-3	3	38	17	2919	phosphorus metabolic process	ATPH|ATPF|ATPD
+9259	1.5262E-3	2.8662E-3	3	41	17	2919	ribonucleotide metabolic process	ATPH|ATPF|ATPD
+9260	1.5262E-3	2.8662E-3	3	41	17	2919	ribonucleotide biosynthetic process	ATPH|ATPF|ATPD
+9165	2.8757E-3	5.2721E-3	3	51	17	2919	nucleotide biosynthetic process	ATPH|ATPF|ATPD
+34654	3.5708E-3	6.2489E-3	3	55	17	2919	nucleobase, nucleoside, nucleotide and nucleic acid biosynthetic process	ATPH|ATPF|ATPD
+34404	3.5708E-3	6.2489E-3	3	55	17	2919	nucleobase, nucleoside and nucleotide biosynthetic process	ATPH|ATPF|ATPD
+9117	7.6340E-3	1.2779E-2	3	72	17	2919	nucleotide metabolic process	ATPH|ATPF|ATPD
+6753	7.6340E-3	1.2779E-2	3	72	17	2919	nucleoside phosphate metabolic process	ATPH|ATPF|ATPD
+6091	8.5501E-3	1.4008E-2	3	75	17	2919	generation of precursor metabolites and energy	ATPH|ATPF|ATPD
+6812	9.1957E-3	1.4751E-2	3	77	17	2919	cation transport	ATPH|ATPF|ATPD
+55086	1.2852E-2	2.0196E-2	3	87	17	2919	nucleobase, nucleoside and nucleotide metabolic process	ATPH|ATPF|ATPD
+6811	1.7723E-2	2.7294E-2	3	98	17	2919	ion transport	ATPH|ATPF|ATPD
+34613	3.4468E-2	4.9148E-2	1	6	17	2919	cellular protein localization	SECY
+46907	3.4468E-2	4.9148E-2	1	6	17	2919	intracellular transport	SECY
+70727	3.4468E-2	4.9148E-2	1	6	17	2919	cellular macromolecule localization	SECY
+6886	3.4468E-2	4.9148E-2	1	6	17	2919	intracellular protein transport	SECY
