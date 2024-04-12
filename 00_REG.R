@@ -5,7 +5,7 @@ library(dplyr)
 library(readr)
 
 # Data import
-node_deg_bet <- read.csv("00_REG_eleven_string_interactions_short.csv", stringsAsFactors = FALSE)
+node_deg_bet <- read.csv("/home/regenera/Documents/BART_gitHub/Course_systems_biology_introduction/00_REG_node_bd.csv", stringsAsFactors = FALSE)
 
 
 
