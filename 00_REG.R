@@ -5,12 +5,16 @@ library(dplyr)
 library(readr)
 
 # Data import
-node_deg_bet <- read.csv("/home/regenera/Documents/BART_gitHub/Course_systems_biology_introduction/00_REG_node_bd.csv", stringsAsFactors = FALSE)
+reg_node_db <- read.csv("/home/regenera/Documents/BART_gitHub/Course_systems_biology_introduction/00_REG_node_bd.csv", stringsAsFactors = FALSE)
 
 # Chart and average lines for quadrant definition
-plot(node_deg_bet$Degree.unDir, node_deg_bet$Betweenness.unDir, xlab="Degree", ylab ="Betweenness", col = "black")
-abline(h = median(node_deg_bet$Betweenness.unDir), v = median(node_deg_bet$Degree.unDir))
+plot(reg_node_db$Degree.unDir, reg_node_db$Betweenness.unDir, xlab="Degree", ylab ="Betweenness", col = "blue")
+abline(h = median(reg_node_db$Betweenness.unDir), v = median(reg_node_db$Degree.unDir))
 
-#
+# Hubs and Bottleneck classification
+g_h_b <- reg_node_db[reg_node_db$Degree.unDir >= median(reg_node_db$Degree.unDir)&(reg_node_db$Betweenness.unDir >= median(reg_node_db$Betweenness.unDir)),]
+g_h_nb <- reg_node_db[reg_node_db$Degree.unDir > median(reg_node_db$Degree.unDir)&(reg_node_db$Betweenness.unDir < median(reg_node_db$Betweenness.unDir)),]
+g_nh_b <- reg_node_db[reg_node_db$Degree.unDir < median(reg_node_db$Degree.unDir)&(reg_node_db$Betweenness.unDir > median(reg_node_db$Betweenness.unDir)),]
+g_nh_nb <- reg_node_db[reg_node_db$Degree.unDir <= median(reg_node_db$Degree.unDir)&(reg_node_db$Betweenness.unDir <= median(reg_node_db$Betweenness.unDir)),]
 
 # # # # # # # # # # B. A. R. T. # # # # # # # # # #
