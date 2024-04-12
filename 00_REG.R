@@ -27,7 +27,7 @@ g_nh_nb$Centrality <- "nHnB"
 
 node_centrality <- bind_rows(g_h_b, g_h_nb, g_nh_b, g_nh_nb)
 
-###### ###### ###### STEP 2 ##### ###### ###### 
+###### ###### ###### STEP 2 ##### ###### ######
 
 
 
