@@ -1,4 +1,4 @@
-##### ##### ##### APLICAÇÃO DE BIOLOGIA DE SISTEMAS NO PROETO DE DOUTORADOA ##### ##### #####
+##### ##### ##### APLICAÇÃO DE BIOLOGIA DE SISTEMAS NO PROETO DE DOUTORADO ##### ##### #####
 
 ###### Bibliotecas e pacotes importantes #####
 library(dplyr)
